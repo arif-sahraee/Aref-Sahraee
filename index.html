@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="وب‌سایت رسمی محمد عارف صحرایی؛ برنامه‌نویس هوش مصنوعی، توسعه‌دهنده وب و مدرس زبان انگلیسی با ۲ سال سابقه تدریس.">
+  <meta name="author" content="محمد عارف صحرایی">
+  <meta name="theme-color" content="#080b14">
+  <title>محمد عارف صحرایی | وب‌سایت رسمی</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b14;--panel:#101726;--muted:#a8b2c7;--text:#f5f7fb;--blue:#58a6ff;--cyan:#55e6d1;--line:rgba(255,255,255,.1)}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(36,91,158,.2),transparent 38%),var(--bg);color:var(--text);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,11,20,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:-.5px}.brand span{color:var(--cyan)}
+    .navlinks{display:flex;gap:22px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--cyan)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .lang-btn{cursor:pointer;font:inherit;font-weight:700;font-size:.85rem;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:10px;padding:8px 14px;transition:.2s}.lang-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:12px;background:linear-gradient(110deg,var(--blue),var(--cyan));color:#07111d;font-weight:800;box-shadow:0 8px 30px rgba(85,230,209,.15);transition:.2s}.btn:hover{transform:translateY(-3px)}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;padding:80px 0}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--cyan);border:1px solid rgba(85,230,209,.25);background:rgba(85,230,209,.06);padding:5px 14px;border-radius:50px;font-size:.85rem}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.25;margin:22px 0 12px;letter-spacing:-2px}h1 strong{color:var(--cyan);display:block}
+    .lead{color:var(--muted);font-size:1.12rem;max-width:610px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}
+    .portrait-wrap{position:relative;display:grid;place-items:center}.glow{position:absolute;width:350px;height:350px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));filter:blur(75px);opacity:.2}
+    .portrait{position:relative;width:min(350px,78vw);aspect-ratio:4/5;object-fit:cover;border-radius:28px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(145deg,#17263a,#0d1422);box-shadow:0 25px 80px rgba(0,0,0,.45)}
+    .photo-hint{position:absolute;bottom:18px;right:50%;transform:translateX(50%);width:max-content;max-width:90%;padding:7px 13px;background:rgba(5,10,18,.78);border:1px solid var(--line);border-radius:30px;color:#dce7f8;font-size:.78rem}
+    section{padding:85px 0}.section-tag{color:var(--cyan);font-size:.85rem;font-weight:700}.section-title{font-size:clamp(1.8rem,4vw,2.7rem);margin:5px 0 35px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:linear-gradient(145deg,rgba(20,31,49,.92),rgba(13,19,31,.92));border:1px solid var(--line);border-radius:20px;padding:26px}.card p{color:var(--muted);margin:0}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:17px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.fact small{display:block;color:var(--muted)}.fact b{font-size:1.02rem}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{padding:22px;border-radius:17px;background:var(--panel);border:1px solid var(--line)}.skill .icon{font-size:1.6rem}.skill h3{margin:5px 0}.skill p{color:var(--muted);font-size:.9rem;margin:0}
+    .contact{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap;background:linear-gradient(110deg,rgba(42,93,148,.25),rgba(85,230,209,.08));border:1px solid var(--line);padding:30px;border-radius:22px}
+    footer{padding:28px 0;color:var(--muted);border-top:1px solid var(--line);font-size:.85rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .social{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.social a{border:1px solid var(--line);padding:7px 13px;border-radius:10px;color:#dbe7f8}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+    .stat{padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.035);text-align:center}
+    .stat b{display:block;color:var(--cyan);font-size:1.35rem}.stat span{color:var(--muted);font-size:.82rem}
+
+    /* Experience */
+    .exp{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .exp-main{display:flex;gap:20px;align-items:flex-start}
+    .exp-badge{flex:0 0 auto;min-width:96px;text-align:center;padding:16px 10px;border-radius:16px;background:rgba(85,230,209,.07);border:1px solid rgba(85,230,209,.28)}
+    .exp-badge b{display:block;font-size:2rem;line-height:1.2;color:var(--cyan)}.exp-badge span{font-size:.8rem;color:var(--muted)}
+    .exp-main h3,.card h3{margin:0 0 6px}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.chip{font-size:.82rem;color:#dbe7f8;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:4px 13px;border-radius:50px}
+
+    /* ARCA */
+    .arca{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
+    .arca-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+    .arca-logo{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#07111d;font-weight:900}
+    .arca-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+    .arca-list li{padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line);color:var(--muted);font-size:.93rem}
+    .arca-list li b{color:var(--text);display:block}
+    .status{display:inline-block;margin-top:16px;font-size:.8rem;color:var(--cyan);border:1px dashed rgba(85,230,209,.4);padding:3px 12px;border-radius:50px}
+
+    @media(max-width:600px){.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1}}
+    @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;text-align:center;padding:55px 0}.lead{margin:auto}.actions,.social{justify-content:center}.portrait-wrap{grid-row:1}.portrait{width:min(270px,70vw)}.about-grid,.exp,.arca{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.nav-actions .btn{display:none}}
+    @media(max-width:480px){.skills,.facts{grid-template-columns:1fr}.contact{padding:22px}.exp-main{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+  </style>
+</head>
+<body>
+<header><div class="container"><nav>
+  <a class="brand" href="#home">SAHRAEE<span>.</span></a>
+  <div class="navlinks">
+    <a href="#about" data-en="About">درباره من</a>
+    <a href="#experience" data-en="Experience">سابقه</a>
+    <a href="#skills" data-en="Skills">مهارت‌ها</a>
+    <a href="#interests" data-en="Interests">علایق</a>
+    <a href="#projects" data-en="Projects">پروژه‌ها</a>
+    <a href="#contact" data-en="Contact">ارتباط</a>
+  </div>
+  <div class="nav-actions">
+    <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">EN</button>
+    <a class="btn" href="#contact" data-en="Contact me">ارتباط با من</a>
+  </div>
+</nav></div></header>
+
+<main>
+  <section class="container hero" id="home">
+    <div>
+      <span class="eyebrow" data-en="✦ Official personal website">✦ وب‌سایت رسمی و شخصی</span>
+      <h1><span data-en="Hi, I'm">سلام، من</span> <strong data-en="Mohammad Aref Sahraee">محمد عارف صحرایی</strong></h1>
+      <p class="lead" data-en="AI programmer, web developer and English teacher with 2 years of English teaching experience. I love building smart, useful and creative digital experiences.">برنامه‌نویس هوش مصنوعی، توسعه‌دهنده وب و مدرس زبان انگلیسی با ۲ سال سابقه تدریس؛ علاقه‌مند به ساخت تجربه‌های دیجیتال هوشمند، کاربردی و خلاقانه.</p>
+      <div class="actions"><a class="btn" href="#about" data-en="More about me">بیشتر درباره من</a><a class="btn secondary" href="#projects" data-en="See my work">مشاهده فعالیت‌ها</a></div>
+      <div class="stats">
+        <div class="stat"><b>AI</b><span data-en="Artificial intelligence">هوش مصنوعی</span></div>
+        <div class="stat"><b>WEB</b><span data-en="Web development">توسعه وب</span></div>
+        <div class="stat"><b data-en="2 yrs">۲ سال</b><span data-en="English teaching">تدریس زبان انگلیسی</span></div>
+      </div>
+      <div class="social"><a href="https://www.instagram.com/Sahraee_001" target="_blank" rel="noopener">Instagram ↗</a><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://t.me/Sahraee_001" target="_blank" rel="noopener">Telegram ↗</a><a href="mailto:arefarefi606@gmail.com">Email ↗</a></div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="glow"></div>
+      <img class="portrait" src="assets/profile.png" alt="تصویر محمد عارف صحرایی" onerror="this.style.visibility='hidden';this.nextElementSibling.style.display='grid'">
+      <div class="portrait" style="display:none;position:absolute;place-items:center;text-align:center;padding:25px;color:#a8b2c7"><span data-en="Put your photo at">عکس خودت را در مسیر</span><br><b dir="ltr">assets/profile.png</b><br><span data-en="to show it here">قرار بده</span></div>
+      <div class="photo-hint" data-en="Official photo of Mohammad Aref Sahraee">تصویر رسمی محمد عارف صحرایی</div>
+    </div>
+  </section>
+
+  <section class="container" id="about">
+    <span class="section-tag" data-en="ABOUT ME">ABOUT ME / درباره من</span><h2 class="section-title" data-en="Get to know me a little">کمی بیشتر با من آشنا شوید</h2>
+    <div class="about-grid">
+      <div class="card"><p data-en="I'm Mohammad Aref Sahraee, an AI programmer and web developer. I have two years of experience teaching English, and I enjoy learning new technologies, solving problems and turning ideas into digital products. This website is my official space to introduce myself and my work in the world of technology.">من محمد عارف صحرایی هستم؛ برنامه‌نویس هوش مصنوعی و توسعه‌دهنده وب. ۲ سال سابقه تدریس زبان انگلیسی دارم و به یادگیری فناوری‌های نو، حل مسئله و تبدیل ایده‌ها به محصولات دیجیتال علاقه‌مندم. این وب‌سایت، فضای رسمی معرفی من و فعالیت‌هایم در دنیای فناوری است.</p></div>
+      <div class="card facts">
+        <div class="fact"><small data-en="Name">نام</small><b data-en="Mohammad Aref Sahraee">محمد عارف صحرایی</b></div>
+        <div class="fact"><small data-en="Age">سن</small><b data-en="21 years old">۲۱ سال</b></div>
+        <div class="fact"><small data-en="Birthplace">زادگاه</small><b data-en="Kabul, Afghanistan">کابل، افغانستان</b></div>
+        <div class="fact"><small data-en="Education">تحصیلات</small><b data-en="High school diploma (grade 12)">دیپلم صنف دوازدهم</b></div>
+        <div class="fact"><small data-en="Experience">سابقه کاری</small><b data-en="2 years teaching English">۲ سال تدریس زبان انگلیسی</b></div>
+        <div class="fact"><small data-en="Field">حوزه فعالیت</small><b data-en="AI and web">هوش مصنوعی و وب</b></div>
+        <div class="fact"><small data-en="Email">ایمیل</small><b dir="ltr"><a href="mailto:arefarefi606@gmail.com">arefarefi606@gmail.com</a></b></div>
+        <div class="fact"><small data-en="Instagram &amp; Telegram">اینستاگرام و تلگرام</small><b dir="ltr">Sahraee_001</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="experience">
+    <span class="section-tag" data-en="EXPERIENCE">EXPERIENCE / سابقه</span><h2 class="section-title" data-en="English teaching experience">سابقه تدریس زبان انگلیسی</h2>
+    <div class="exp">
+      <div class="card exp-main">
+        <div class="exp-badge"><b data-en="2">۲</b><span data-en="years">سال</span></div>
+        <div>
+          <h3 data-en="English teacher">مدرس زبان انگلیسی</h3>
+          <p data-en="Two years of teaching English taught me how to explain complex ideas simply, be patient with learners and adapt to different levels.">دو سال تدریس زبان انگلیسی به من یاد داد چطور مفاهیم پیچیده را ساده توضیح بدهم، با یادگیرنده‌ها صبور باشم و آموزش را با سطح هر نفر هماهنگ کنم.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3 data-en="What teaching gave me">تدریس چه چیزی به من داد</h3>
+        <p data-en="These skills help me both in programming and in working with people.">این مهارت‌ها هم در برنامه‌نویسی و هم در کار با آدم‌ها به من کمک می‌کنند.</p>
+        <div class="chips"><span class="chip" data-en="Clear communication">ارتباط شفاف</span><span class="chip" data-en="Patience">صبوری</span><span class="chip" data-en="Simple explanations">توضیح ساده</span><span class="chip" data-en="Teamwork">کار گروهی</span><span class="chip" data-en="Time management">مدیریت زمان</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="skills">
+    <span class="section-tag" data-en="WHAT I DO">WHAT I DO / حوزه‌های فعالیت</span><h2 class="section-title" data-en="Skills and interests">علاقه‌مندی‌ها و مهارت‌ها</h2>
+    <div class="skills">
+      <article class="skill"><div class="icon">🤖</div><h3 data-en="Artificial intelligence">هوش مصنوعی</h3><p data-en="Working with smart tools and building AI-based solutions.">کار با ابزارها و فناوری‌های هوشمند و ساخت راهکارهای مبتنی بر AI.</p></article>
+      <article class="skill"><div class="icon">💻</div><h3 data-en="Web development">توسعه وب</h3><p data-en="Designing and building modern, responsive websites.">طراحی و پیاده‌سازی وب‌سایت‌های مدرن و واکنش‌گرا.</p></article>
+      <article class="skill"><div class="icon">🐍</div><h3 data-en="Python programming">برنامه‌نویسی پایتون</h3><p data-en="Writing scripts and tools, including voice and AI assistants.">نوشتن اسکریپت و ابزار، از جمله دستیارهای صوتی و هوشمند.</p></article>
+      <article class="skill"><div class="icon">🎓</div><h3 data-en="English teaching">تدریس زبان انگلیسی</h3><p data-en="Two years of experience teaching English to learners.">دو سال تجربه در آموزش زبان انگلیسی به زبان‌آموزان.</p></article>
+      <article class="skill"><div class="icon">🚀</div><h3 data-en="Digital products">ساخت محصولات دیجیتال</h3><p data-en="Turning ideas into practical projects and online experiences.">تبدیل ایده‌ها به پروژه‌های کاربردی و تجربه‌های آنلاین.</p></article>
+      <article class="skill"><div class="icon">🌐</div><h3 data-en="Two languages">دو زبانه</h3><p data-en="This website is available in Persian and English.">این وب‌سایت به دو زبان فارسی و انگلیسی در دسترس است.</p></article>
+    </div>
+  </section>
+
+  <section class="container" id="interests">
+    <span class="section-tag" data-en="BEYOND THE SCREEN">BEYOND THE SCREEN / علایق شخصی</span><h2 class="section-title" data-en="Things I love">چیزهایی که دوست دارم</h2>
+    <div class="skills">
+      <article class="skill"><div class="icon">🚴</div><h3 data-en="Cycling">دوچرخه‌سواری</h3><p data-en="Freedom, energy and discovering new routes. Cycling is one of my lifelong passions.">آزادی، انرژی و کشف مسیرهای تازه؛ دوچرخه‌سواری یکی از علاقه‌های همیشگی من است.</p></article>
+      <article class="skill"><div class="icon">⚽</div><h3 data-en="Football">فوتبال</h3><p data-en="The thrill of competition, teamwork and the joy of following the game.">هیجان رقابت، کار تیمی و لذت دنبال‌کردن فوتبال.</p></article>
+      <article class="skill"><div class="icon">🎧</div><h3 data-en="Calm music">آهنگ‌های آرام</h3><p data-en="Calm music to focus, think and step away from the daily noise.">موسیقی آرام برای تمرکز، فکرکردن و فاصله‌گرفتن از شلوغی روزمره.</p></article>
+    </div>
+  </section>
+
+  <section class="container" id="projects">
+    <span class="section-tag" data-en="MY WORK">MY WORK / فعالیت‌ها</span><h2 class="section-title" data-en="Projects and activities">پروژه‌ها و فعالیت‌ها</h2>
+    <div class="arca">
+      <div class="card">
+        <div class="arca-head"><div class="arca-logo">A</div><div><h3 style="margin:0">ARCA | <span data-en="آرکا">آرکا</span></h3><small style="color:var(--muted)" data-en="Persian voice assistant">دستیار صوتی فارسی</small></div></div>
+        <p data-en="ARCA is my own voice assistant, written in Python. You speak to it in Persian, it understands you through the microphone, thinks with an AI model and answers back in a natural voice. My goal is to make ARCA a better, free and fully Persian-friendly assistant.">آرکا دستیار صوتی شخصی من است که با پایتون نوشته شده. با آن فارسی صحبت می‌کنی، از طریق میکروفون صدایت را می‌فهمد، با یک مدل هوش مصنوعی فکر می‌کند و با صدای طبیعی جواب می‌دهد. هدف من این است که آرکا را به دستیاری بهتر، رایگان و کاملاً فارسی‌پسند تبدیل کنم.</p>
+        <span class="status" data-en="In development">در حال توسعه</span>
+      </div>
+      <ul class="arca-list">
+        <li><b data-en="🎙️ Voice input">🎙️ ورودی صوتی</b><span data-en="Listens to your Persian speech through the microphone.">گفتار فارسی تو را از طریق میکروفون می‌شنود.</span></li>
+        <li><b data-en="🧠 AI brain">🧠 مغز هوشمند</b><span data-en="Uses an AI model to understand questions and write answers.">با یک مدل هوش مصنوعی سؤال‌ها را می‌فهمد و پاسخ می‌نویسد.</span></li>
+        <li><b data-en="🔊 Natural voice">🔊 صدای طبیعی</b><span data-en="Speaks the answer back using a text-to-speech voice.">پاسخ را با صدای تبدیل متن به گفتار بیان می‌کند.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container" id="contact">
+    <div class="contact"><div><span class="section-tag" data-en="GET IN TOUCH">GET IN TOUCH</span><h2 style="margin:4px 0" data-en="I'm ready to collaborate and connect">برای همکاری و ارتباط آماده‌ام</h2><p style="color:var(--muted);margin:0" data-en="Email me or message me on Telegram or Instagram for professional contact.">برای ارتباط حرفه‌ای می‌توانی به ایمیل، تلگرام یا اینستاگرام من پیام بدهی.</p></div><div class="actions"><a class="btn" href="mailto:arefarefi606@gmail.com"><span data-en="Send email">ارسال ایمیل</span>&nbsp;↗</a><a class="btn secondary" href="https://t.me/Sahraee_001" target="_blank" rel="noopener">Telegram: Sahraee_001</a><a class="btn secondary" href="https://www.instagram.com/Sahraee_001" target="_blank" rel="noopener">Instagram: Sahraee_001</a></div></div>
+  </section>
+</main>
+<footer><div class="container footer-row"><span>© <span id="year"></span> <span data-en="Mohammad Aref Sahraee. All rights reserved.">محمد عارف صحرایی. تمامی حقوق محفوظ است.</span></span><span data-en="Built with a love of technology ✦">ساخته‌شده با علاقه به فناوری ✦</span></div></footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+
+(function(){
+  var items=document.querySelectorAll('[data-en]');
+  items.forEach(function(el){el.setAttribute('data-fa',el.innerHTML)});
+
+  var meta={
+    fa:{title:'محمد عارف صحرایی | وب‌سایت رسمی',desc:'وب‌سایت رسمی محمد عارف صحرایی؛ برنامه‌نویس هوش مصنوعی، توسعه‌دهنده وب و مدرس زبان انگلیسی با ۲ سال سابقه تدریس.',btn:'EN'},
+    en:{title:'Mohammad Aref Sahraee | Official Website',desc:'Official website of Mohammad Aref Sahraee: AI programmer, web developer and English teacher with 2 years of teaching experience.',btn:'فا'}
+  };
+
+  function setLang(lang){
+    var html=document.documentElement;
+    html.lang=lang;
+    html.dir=lang==='fa'?'rtl':'ltr';
+    items.forEach(function(el){el.innerHTML=el.getAttribute('data-'+lang)});
+    document.title=meta[lang].title;
+    document.querySelector('meta[name="description"]').setAttribute('content',meta[lang].desc);
+    document.getElementById('langBtn').textContent=meta[lang].btn;
+    document.querySelector('.portrait').alt=lang==='fa'?'تصویر محمد عارف صحرایی':'Portrait of Mohammad Aref Sahraee';
+    try{localStorage.setItem('lang',lang)}catch(e){}
+  }
+
+  document.getElementById('langBtn').addEventListener('click',function(){
+    setLang(document.documentElement.lang==='fa'?'en':'fa');
+  });
+
+  var saved=null;
+  try{saved=localStorage.getItem('lang')}catch(e){}
+  if(saved==='en')setLang('en');
+})();
+</script>
+</body>
+</html>
